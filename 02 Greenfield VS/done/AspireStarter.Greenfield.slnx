@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="AspireStarter.Greenfield.AppHost/AspireStarter.Greenfield.AppHost.csproj" />
+  <Project Path="AspireStarter.Greenfield.Server/AspireStarter.Greenfield.Server.csproj" />
+  <Project Path="frontend/frontend.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>

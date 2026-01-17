@@ -1,0 +1,50 @@
+using AspireBrownfield.BendApp.Web;
+using AspireBrownfield.BendApp.Web.Components;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.AddServiceDefaults();
+
+// Add services to the container.
+
+// Add Redis cache output caching
+// local debugging: "localhost:6379"
+string? redisConnStr = builder.Configuration.GetConnectionString("cache"); // <-- no longer "Redis" because we named it "cache" in AppHost
+ArgumentNullException.ThrowIfNullOrWhiteSpace(redisConnStr);
+builder.Services.AddStackExchangeRedisOutputCache(options => {
+	options.Configuration = redisConnStr;
+});
+
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+builder.Services.AddHttpClient<WeatherApiClient>(client =>
+    {
+        string? apiUrl = builder.Configuration.GetValue<string>("apiservice_https"); // <-- no longer "AppSettings:WeatherApiUrl" because we named it "apiservice" in AppHost
+        ArgumentNullException.ThrowIfNullOrWhiteSpace(apiUrl);
+        client.BaseAddress = new Uri(apiUrl);
+    });
+
+var app = builder.Build();
+
+app.MapDefaultEndpoints();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAntiforgery();
+
+app.UseOutputCache();
+
+app.MapStaticAssets();
+
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
+
+app.Run();

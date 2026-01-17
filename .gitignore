@@ -1,0 +1,18 @@
+# downloaded content
+node_modules
+# built content
+bin
+obj
+# user-specific files
+*.user
+*.suo
+.vs
+package-lock.json
+redis-data
+postgres-data
+mssql-data
+# temp files
+.DS_Store
+*.tmp
+# secrets
+.env
