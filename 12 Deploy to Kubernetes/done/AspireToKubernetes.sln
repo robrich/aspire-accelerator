@@ -1,0 +1,38 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.0.0
+MinimumVisualStudioVersion = 17.8.0.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireToKubernetes.AppHost", "AspireToKubernetes.AppHost\AspireToKubernetes.AppHost.csproj", "{847FC9A5-9304-430C-A083-43BD17A87CA8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireToKubernetes.Server", "AspireToKubernetes.Server\AspireToKubernetes.Server.csproj", "{2841F50D-2B2D-4230-A0DA-41DFAF19C036}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "frontend", "frontend\frontend.esproj", "{5B8B8403-905C-42CD-B0D1-6B159F4623AF}"
+EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{847FC9A5-9304-430C-A083-43BD17A87CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{847FC9A5-9304-430C-A083-43BD17A87CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{847FC9A5-9304-430C-A083-43BD17A87CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{847FC9A5-9304-430C-A083-43BD17A87CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2841F50D-2B2D-4230-A0DA-41DFAF19C036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2841F50D-2B2D-4230-A0DA-41DFAF19C036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2841F50D-2B2D-4230-A0DA-41DFAF19C036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2841F50D-2B2D-4230-A0DA-41DFAF19C036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B8B8403-905C-42CD-B0D1-6B159F4623AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8B8403-905C-42CD-B0D1-6B159F4623AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B8B8403-905C-42CD-B0D1-6B159F4623AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B8B8403-905C-42CD-B0D1-6B159F4623AF}.Release|Any CPU.Build.0 = Release|Any CPU
+
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF631F8A-6AB0-4A44-946F-692C5A6D9EEE}
+	EndGlobalSection
+EndGlobal

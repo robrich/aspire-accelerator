@@ -3,6 +3,9 @@ node_modules
 # built content
 bin
 obj
+**/done/dist
+**/start/dist
+# but not wwwroot/lib/*/dist unless we switch bootstrap to a CDN
 # user-specific files
 *.user
 *.suo
