@@ -15,6 +15,7 @@ The demo showcases how to:
 ### `done/`
 
 Contains the **completed demo** with all code implemented. This is a fully working example that demonstrates:
+
 - `AspireIntro.AppHost` - The orchestration layer that manages all services
 - `AspireIntro.ServiceDefaults` - Shared service configuration
 - `ModelConsole` - Console application that uses the hosted model
@@ -31,14 +32,16 @@ Contains a **starting point** with the basic project structure already set up. T
 
 ## Getting Started
 
-1. Choose either the `done` folder to run the completed demo or the `start` folder to build it yourself
-2. Ensure you have Ollama installed and running with the `llama3.2:1b` model available
-3. Open the `.slnx` file to load the solution
-4. Run the AppHost project to orchestrate the services
+1. Choose either the `done` folder to run the completed demo or the `start` folder to build it yourself.
+2. Open the `.slnx` file to load the solution in Visual Studio or VS Code
+3. Run the `AppHost` project to orchestrate the services
+4. Open the Console tab in the Aspire dashboard to view the logs and see the output
+
+Note:  The 1st time the application runs it will download the ollama Docker image and the llama model. The application will wait until this download is complete before proceeding.
 
 ## What It Does
 
-The demo demonstrates the Rick Astley meme by asking the hosted model: "What was that song from the Rick meme that goes like `I'm never gonna...`?"
+The demo demonstrates a query to the model by asking the the SLM: "What was that song from the Rick meme that goes like `I'm never gonna...`?"
 
 The model responds with the answer, showcasing seamless orchestration between the AppHost and the client application through Aspire.
 
