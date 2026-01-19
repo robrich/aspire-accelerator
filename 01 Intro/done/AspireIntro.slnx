@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="AspireIntro.AppHost/AspireIntro.AppHost.csproj" />
+  <Project Path="AspireIntro.ServiceDefaults/AspireIntro.ServiceDefaults.csproj" />
+  <Project Path="ModelConsole/ModelConsole.csproj" />
+</Solution>
