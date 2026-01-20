@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MultipleIntegrations.Api/MultipleIntegrations.Api.csproj" />
+  <Project Path="MultipleIntegrations.AppHost/MultipleIntegrations.AppHost.csproj" />
+  <Project Path="MultipleIntegrations.ServiceDefaults/MultipleIntegrations.ServiceDefaults.csproj" />
+</Solution>

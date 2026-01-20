@@ -1,0 +1,49 @@
+@MultipleIntegrations.Api_HostAddress = http://localhost:5180
+
+### Test 1: Positive sentiment
+GET {{MultipleIntegrations.Api_HostAddress}}/sentiment?value=This%20is%20amazing!
+Accept: application/json
+
+###
+
+### Test 2: Negative sentiment
+GET {{MultipleIntegrations.Api_HostAddress}}/sentiment?value=This%20is%20terrible%20and%20makes%20me%20very%20sad.
+Accept: application/json
+
+###
+
+### Test 3: Fearful sentiment
+GET {{MultipleIntegrations.Api_HostAddress}}/sentiment?value=I%20was%20terrified%20the%201st%20time%20I%20presented..
+Accept: application/json
+
+###
+
+### Test 4: Mixed emotions
+GET {{MultipleIntegrations.Api_HostAddress}}/sentiment?value=I%20love%20the%20idea%20but%20I%27m%20worried%20about%20the%20cost.
+Accept: application/json
+
+###
+
+### Test 5: Excited and happy
+GET {{MultipleIntegrations.Api_HostAddress}}/sentiment?value=I%20can%27t%20believe%20we%20won%21%20This%20is%20the%20best%20day%20ever%21
+Accept: application/json
+
+###
+
+### Test 6: Angry and frustrated
+GET {{MultipleIntegrations.Api_HostAddress}}/sentiment?value=I%20am%20so%20frustrated%20with%20this%20situation%21%20Nothing%20ever%20works%20right%21
+Accept: application/json
+
+###
+
+### Test 7: Surprised
+GET {{MultipleIntegrations.Api_HostAddress}}/sentiment?value=I%20cannot%20believe%20what%20just%20happened%21%20I%20did%20not%20expect%20this%20at%20all%21
+Accept: application/json
+
+###
+
+### Test 8: Hopeful and optimistic
+GET {{MultipleIntegrations.Api_HostAddress}}/sentiment?value=Tomorrow%20is%20a%20new%20day%20full%20of%20possibilities%20and%20opportunities.
+Accept: application/json
+
+###

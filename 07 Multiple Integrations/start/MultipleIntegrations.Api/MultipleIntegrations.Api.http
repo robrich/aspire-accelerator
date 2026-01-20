@@ -1,0 +1,6 @@
+@MultipleIntegrations.Api_HostAddress = http://localhost:5180
+
+GET {{MultipleIntegrations.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
