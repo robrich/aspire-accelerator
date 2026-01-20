@@ -6,13 +6,13 @@ var password = builder.AddParameter("password", secret: true);
 var dbName = "weatherdb"; // because it already exists, we can fill it with content
 
 var postgres = builder.AddPostgres("postgres", username, password)
-    .WithEnvironment("POSTGRES_DB", dbName)
     .WithImageTag("alpine")
-    //.WithDataVolume("postgres-data", isReadOnly: false); // volume is faster and saves in Docker between runs but does no save to local disk
-    .WithDataBindMount(
+    .WithEnvironment("POSTGRES_DB", dbName)
+    .WithInitFiles("../postgres-init/init.sql")
+    //.WithDataVolume("postgres-data", isReadOnly: false); // volume is faster and saves in Docker between runs
+    .WithDataBindMount( // bind mount saves to local disk, making it easier to see the files saved
         source: "../postgres-data",
         isReadOnly: false)
-    .WithInitFiles("../postgres-init/init.sql")
     .WithPgWeb();
 
 var weatherdb = postgres.AddDatabase(dbName);

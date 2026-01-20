@@ -17,19 +17,6 @@ var apiService = builder.AddProject<Projects.AspireAndSqlServer_ApiService>("api
     .WithReference(weatherdb)
     .WaitFor(weatherdb);
 
-/*
-// CloudBeaver, a web-based GUI for SQL Server and other DBs
-var cloudbeaver = builder.AddContainer("cloudbeaver", "dbeaver/cloudbeaver")
-    .WithHttpEndpoint(port: 8978, targetPort: 8978)
-    .WithExternalHttpEndpoints()
-    // Persist CloudBeaver config/state if desired
-    //.WithDataVolume("cloudbeaver-data")
-    //.WithDataBindMount(source: "../cloudbeaver-data")
-    // Ensure CloudBeaver can resolve and reach the mssql service by name
-    .WithContainerNetworkAlias("mssql")
-    .WaitFor(mssql);
-*/
-
 builder.AddProject<Projects.AspireAndSqlServer_Web>("webfrontend")
     .WithExternalHttpEndpoints()
     .WithHttpHealthCheck("/health")
